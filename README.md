@@ -1,1 +1,18 @@
-# JSC270_HW2
+JSC270 Assignment 2 Report
+Melissa Cecilia
+1009129738
+
+Description of Dataset
+The dataset was obtained from the census bureau database at: http://www.census.gov/ftp/pub/DES/www/welcome.html. It was extracted and cleaned from the 1994 US Census. The prediction task of the dataset is to determine whether a person makes over 50k a year. It contains 32 561 entries and 15 columns, namely age, workclass, fnlwgt, education, education_num	marital_status, occupation, relationship, race, sex, capital_gain, capital_loss, hours_per_week	native_country and gross_income_group. 
+
+Proposed Question
+The linear regression model seeks to answer the question of: How do various factors correlate with the number of hours per week that a person works. It also attempts to predict the hours per week based on the other factors, namely sex, education number and gross income group. More specifically, model 1 shows the correlation between sex and number of hours per week. Model 2 also takes education number into consideration, while model 3 uses both of the previous 2 variables and also adds the gross income group. It aims to understand how the three factors influence the number of hours worked. 
+
+Description of the model
+The variables chosen are hours_per_week, sex, education_num and gross_income_group. ‘Hours_per_week’ refers to the number of hours worked per week, sex refers to the sex of the individual, either male or female, ‘education_num’ is a numerical representation of the education level an individual has completed and lastly ‘gross_income_group’ is categorical data referring to whether a person earns less than or equal to 50k or more than 50k. Sex is chosen since males and females have different roles in the household and thus the number of hours per week may vary due to these, causing a potential correlation between these 2 variables. The education number is chosen since it is likely correlated to hours per week as a higher level of education may indicate that an individual is more likely to work and have a stable job, thus working longer hours. Lastly, gross income group was chosen as a variable since earning more than 50k a year may indicate that an individual may work more hours a week. 
+
+Interpretation and Description
+Model 1 has an intercept of 36.41 and a gradient of 6.02, which means the estimated average hours per week for females is 36.41 and males work an additional 6.02 hours per week more than females on average. Model 2 has an intercept of 29.41, which means the estimated average hours per week for females is 29.41. Additionally, males work an additional 5.97 hours per week more than females on average and for each increased education number, a person is estimated to work an additional 0.70 hours per week. Model 3 has an intercept of 31.42, which means the estimated average hours per week for females is 31.42. Males work an additional 5.10 hours per week more than females on average, for each increased education number, a person is estimated to work an additional 0.45 hours per week and those with an income of more than 50k work approximately an additional 4.52 hours a week compared to those who earn less than 50k. 
+
+All 3 models have an R-squared value below 0.1 and thus have a weak correlation between the variables. Model 1 has the lowest R-squared value and thus the weakest correlation while model 3 has the highest R-squared value. This may suggest that model 3 can better predict the hours worked per week better than models 1 and 2. However, we should also note that since two of the three variables used to predict hours per week are categorical with only 2 categories, namely sex (male and female) and gross income group (<=50k and >50k), this may contribute to why the R-squared value is very low. 
+
